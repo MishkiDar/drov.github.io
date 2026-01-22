@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор дров | Расчет дров на зиму | Сколько дров нужно</title>
+    <meta name="description" content="Онлайн калькулятор дров: рассчитайте сколько дров нужно на зиму для отопления дома. Учет площади, утепления, климата и типа дров.">
+    <meta name="keywords" content="сколько дров нужно, расчет дров, калькулятор дров, куб дров, дрова на зиму">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="canonical" href="https://дров.рф/инструменты/калькулятор-дров/">
+</head>
+<body>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+        ym(99135720, 'init', {webvisor:true, clickmap:true, accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/99135720" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YLPJ6JSLFC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YLPJ6JSLFC');
+    </script>
+
+    <header>
+        <div class="container header-container">
+            <a href="../../" class="logo">ДРОВ.<span>РФ</span></a>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="../../">Главная</a></li>
+                    <li><a href="../../категории/">Категории</a></li>
+                    <li><a href="../../статьи/">Статьи</a></li>
+                    <li><a href="../">Инструменты</a></li>
+                    <li><a href="../../где-купить/">Купить</a></li>
+                    <li><a href="../../контакты.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="breadcrumbs container">
+            <a href="../../">Главная</a> > 
+            <a href="../">Инструменты</a> > 
+            <span>Калькулятор дров</span>
+        </div>
+
+        <section class="page-header">
+            <div class="container">
+                <h1>Калькулятор дров: расчет количества на зиму</h1>
+                <p class="utp">Точный расчет необходимого количества дров с учетом площади дома, утепления, климата и типа дров. Рассчитайте за 2 минуты!</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="content-list">
+                <h2>Онлайн калькулятор расчета дров</h2>
+                <p>Наш калькулятор поможет точно рассчитать сколько дров вам понадобится на отопительный сезон. Расчет учитывает площадь дома, качество утепления, климатические условия, тип печи и породу дров.</p>
+
+                <div class="card" style="max-width: 800px; margin: 2rem auto; padding: 2rem;">
+                    <h3 style="text-align: center; margin-bottom: 2rem;">Калькулятор дров</h3>
+                    
+                    <form id="drovCalculator" style="display: grid; gap: 1.5rem;">
+                        <div>
+                            <label for="area" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Площадь дома (м²):</label>
+                            <input type="number" id="area" min="20" max="500" value="100" required style="width: 100%; padding: 0.8rem; border: 2px solid var(--primary-color); border-radius: 8px;">
+                        </div>
+                        
+                        <div>
+                            <label for="insulation" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Качество утепления:</label>
+                            <select id="insulation" required style="width: 100%; padding: 0.8rem; border: 2px solid var(--primary-color); border-radius: 8px;">
+                                <option value="50">Хорошее утепление (50 Вт/м²)</option>
+                                <option value="100" selected>Среднее утепление (100 Вт/м²)</option>
+                                <option value="150">Слабое утепление (150 Вт/м²)</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="woodType" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Порода дров:</label>
+                            <select id="woodType" required style="width: 100%; padding: 0.8rem; border: 2px solid var(--primary-color); border-radius: 8px;">
+                                <option value="4.2">Дуб (4.2 кВт·ч/кг)</option>
+                                <option value="4.0" selected>Береза (4.0 кВт·ч/кг)</option>
+                                <option value="4.1">Сосна (4.1 кВт·ч/кг)</option>
+                                <option value="3.8">Ольха (3.8 кВт·ч/кг)</option>
+                                <option value="3.5">Осина (3.5 кВт·ч/кг)</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="efficiency" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">КПД печи:</label>
+                            <select id="efficiency" required style="width: 100%; padding: 0.8rem; border: 2px solid var(--primary-color); border-radius: 8px;">
+                                <option value="0.8">Современная печь (80%)</option>
+                                <option value="0.7" selected>Обычная печь (70%)</option>
+                                <option value="0.6">Старая печь (60%)</option>
+                                <option value="0.4">Камин открытый (40%)</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="season" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Дней отопительного сезона:</label>
+                            <input type="number" id="season" min="90" max="240" value="180" required style="width: 100%; padding: 0.8rem; border: 2px solid var(--primary-color); border-radius: 8px;">
+                        </div>
+                        
+                        <button type="submit" style="background: var(--gradient-primary); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s;">
+                            Рассчитать
+                        </button>
+                    </form>
+                    
+                    <div id="result" style="margin-top: 2rem; padding: 1.5rem; background: rgba(107, 168, 167, 0.1); border-radius: 8px; display: none;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Результаты расчета:</h3>
+                        <div id="resultContent"></div>
+                    </div>
+                </div>
+
+                <h3>Как пользоваться калькулятором:</h3>
+                <ol>
+                    <li><strong>Введите площадь дома</strong> - общая отапливаемая площадь в квадратных метрах</li>
+                    <li><strong>Выберите качество утепления</strong> - от этого зависит теплопотери</li>
+                    <li><strong>Выберите породу дров</strong> - разные породы имеют разную теплоту сгорания</li>
+                    <li><strong>Укажите КПД печи</strong> - эффективность вашей печи влияет на расход</li>
+                    <li><strong>Укажите длину сезона</strong> - количество дней отопительного сезона</li>
+                    <li><strong>Нажмите "Рассчитать"</strong> - получите точный результат</li>
+                </ol>
+
+                <h3>Факторы влияющие на расчет:</h3>
+                <ul>
+                    <li><strong>Площадь дома</strong> - чем больше площадь, тем больше дров требуется</li>
+                    <li><strong>Утепление</strong> - хорошее утепление снижает расход в 2-3 раза</li>
+                    <li><strong>Порода дров</strong> - дуб дает больше тепла чем осина</li>
+                    <li><strong>КПД печи</strong> - современные печи эффективнее старых</li>
+                    <li><strong>Климат</strong> - в холодных регионах расход выше</li>
+                    <li><strong>Режим отопления</strong> - постоянное или периодическое</li>
+                </ul>
+
+                <h3>Примеры расчетов:</h3>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3><i class="fas fa-home"></i> Дом 100 м²</h3>
+                        <ul>
+                            <li>Среднее утепление</li>
+                            <li>Березовые дрова</li>
+                            <li>Обычная печь</li>
+                            <li><strong>Результат: 8-10 куб.м</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3><i class="fas fa-building"></i> Дом 150 м²</h3>
+                        <ol>
+                            <li>Хорошее утепление</li>
+                            <li>Дубовые дрова</li>
+                            <li>Современная печь</li>
+                            <li><strong>Результат: 10-12 куб.м</strong></li>
+                        </ol>
+                    </div>
+                    
+                    <div class="card">
+                        <h3><i class="fas fa-cabin"></i> Дача 50 м²</h3>
+                        <ul>
+                            <li>Слабое утепление</li>
+                            <li>Сосновые дрова</li>
+                            <li>Периодическое отопление</li>
+                            <li><strong>Результат: 4-6 куб.м</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="telegram-cta fade-in">
+                <h2>Нужен более точный расчет?</h2>
+                <p>Наш ИИ-ассистент рассчитает с учетом:</p>
+                <ul>
+                    <li>Точных теплопотерь вашего дома</li>
+                    <li>Климатических условий вашего региона</li>
+                    <li>Режима отопления и желаемой температуры</li>
+                    <li>Стоимости разных пород дров</li>
+                    <li>Рекомендаций по экономии</li>
+                </ul>
+                <a href="https://t.me/+nPuKNYAudAxmYWRi" class="telegram-btn" target="_blank">
+                    <i class="fab fa-telegram"></i> Рассчитать количество дров в Telegram-боте
+                </a>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">Персональный расчет с учетом всех нюансов</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ДРОВ.РФ</h3>
+                    <p>Полезные инструменты для расчета дров.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Другие инструменты</h3>
+                    <ul>
+                        <li><a href="../сравнение-дров/">Сравнение дров</a></li>
+                        <li><a href="../../статьи/сколько-дров-нужно/">Сколько дров нужно</a></li>
+                        <li><a href="../../категории/калькуляторы-инструкции/">Калькуляторы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Полезные ссылки</h3>
+                    <ul>
+                        <li><a href="../../статьи/теплота-сгорания-дров/">Теплота сгорания</a></li>
+                        <li><a href="../../где-купить/">Купить дрова</a></li>
+                        <li><a href="../../контакты.html">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 ДРОВ.РФ. Все права защищены.</p>
+                <p><a href="../../sitemap.xml">Карта сайта</a> | <a href="../../контакты.html">Контакты</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('drovCalculator').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const area = parseFloat(document.getElementById('area').value);
+            const insulation = parseFloat(document.getElementById('insulation').value);
+            const woodType = parseFloat(document.getElementById('woodType').value);
+            const efficiency = parseFloat(document.getElementById('efficiency').value);
+            const season = parseFloat(document.getElementById('season').value);
+            
+            // Расчет теплопотерь (Вт)
+            const heatLoss = area * insulation;
+            
+            // Суточный расход (кг/день)
+            const dailyConsumption = (heatLoss * 24) / (woodType * efficiency * 1000);
+            
+            // Сезонный расход (кг)
+            const seasonConsumption = dailyConsumption * season;
+            
+            // Сезонный расход (куб.м) - примерно 650 кг на куб для березы
+            const seasonCubic = seasonConsumption / 650;
+            
+            // Стоимость (примерная, 4000 руб за куб)
+            const cost = seasonCubic * 4000;
+            
+            const resultDiv = document.getElementById('result');
+            const resultContent = document.getElementById('resultContent');
+            
+            resultContent.innerHTML = `
+                <p><strong>Теплопотери дома:</strong> ${heatLoss.toFixed(0)} Вт</p>
+                <p><strong>Суточный расход:</strong> ${dailyConsumption.toFixed(1)} кг/день</p>
+                <p><strong>На сезон (${season} дней):</strong></p>
+                <p style="font-size: 1.2rem; color: var(--primary-color);"><strong>${seasonConsumption.toFixed(0)} кг</strong> (примерно <strong>${seasonCubic.toFixed(1)} куб.м</strong>)</p>
+                <p><strong>Примерная стоимость:</strong> ${cost.toFixed(0)} руб.</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">* Расчет приблизительный. Для точного расчета используйте ИИ-ассистента.</p>
+            `;
+            
+            resultDiv.style.display = 'block';
+        });
+    </script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>
